@@ -1,0 +1,56 @@
+header{
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    padding: 10px 50px;
+    z-index: 100;
+}
+.logo{
+    font-size: 28px;
+}
+header ul{
+    display: flex;
+    margin: 0;
+}
+header ul li{
+    margin-left: 50px;
+    position: relative;
+}
+header .drop-down-menu>li>a{
+    transition: 0.3s;
+    padding: 5px 20px;
+}
+header .drop-down-menu>li>a:hover,
+header .drop-down-menu>li>a.active{
+    background-color: rgb(32, 32, 87);
+}
+header .drop-down-menu>li:hover>a{
+    background-color: rgb(32, 32, 87);
+}
+a{
+    text-decoration: none;
+}
+header .drop-down-menu ul{
+    position: absolute;
+    display: none;
+    background-color: rgb(32, 32, 87);
+    padding: 0;
+}
+header .drop-down-menu ul li{
+    margin: 0;
+    text-align: left;
+}
+header .drop-down-menu ul li a{
+    padding: 5px 20px;
+}
+header .drop-down-menu li:hover>ul{
+    display: block;
+} 
+header .drop-down-menu ul li:hover{
+    background-color: blueviolet;
+}

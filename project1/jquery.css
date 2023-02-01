@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    list-style: none;
+}
+
+.block1,.block2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    transition: 0.5s;
+}
+.block-bg1{
+    background-color: blueviolet;
+}
+.block-bg2{
+    background-color: rgb(43, 195, 226);
+}
+.buttonarea{
+    margin: 20px 0px;
+}
