@@ -1,0 +1,21 @@
+$('#btnShow').on('click',function(){
+    $('.block1').show();
+})
+$('#btnHide').on('click',function(){
+    $('.block1').hide();
+})
+$('#btnToggle').on('click',function(){
+    $('.block1').toggle();
+})
+$('#btnSShow').on('click',function(){
+    $('.block2').slideDown();
+})
+$('#btnSHide').on('click',function(){
+    $('.block2').slideUp();
+})
+$('#btnSToggle').on('click',function(){
+    $('.block2').slideToggle();
+})
+$('#btnToggleClass').on('click',function(){
+    $('.block2').toggleClass('block-bg1 block-bg2');
+})
