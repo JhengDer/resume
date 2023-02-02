@@ -8,3 +8,131 @@
     font-family: "Poppins",sans-serif;
     list-style: none;
 }
+.profileSec{
+    background-image:url("https://picsum.photos/1600/900/?random=10");
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    clip-path: polygon(0 0,100% 0,100% 100%,0% 80%);
+    position: relative;
+}
+.profileSec .proSecTitle1{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    animation: Helloin 1s cubic-bezier(.4,.94,.56,1.59);
+    transform: translate(-50%, -50%);
+}
+.profileSec .proSecTitle1::before{
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -15px;
+    width:20px;
+    height: 5px;
+    background-color: rgb(123, 123, 123);
+}
+.profileSec .proSecTitle1::after{
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -15px;
+    height: 20px;
+    width: 5px;
+    background-color: rgb(123, 123, 123);
+}
+@keyframes Helloin{
+    0%{
+        left: 38%;
+        color: transparent;
+    }
+    80%{
+        left: 47%;
+    }
+    100%{
+        left: 45%;
+    }
+}
+.profileSec .proSecTitle2{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    animation: Namein 1s cubic-bezier(.4,.94,.56,1.59);
+    transform: translate(-50%, -50%);
+}
+.profileSec .proSecTitle2::before{
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    right: -15px;
+    width:20px;
+    height: 5px;
+    background-color: rgb(123, 123, 123);
+}
+.profileSec .proSecTitle2::after{
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    right: -15px;
+    height: 20px;
+    width: 5px;
+    background-color: rgb(123, 123, 123);
+}
+@keyframes Namein{
+    0%{
+        left: 60%;
+        color: transparent;
+    }
+    80%{
+        left: 53%;
+    }
+    100%{
+        left: 55%;
+    }
+}
+.aboutme{
+    padding-bottom: 100px;
+    margin: 50px auto;
+}
+.aboutme .row{
+    display: flex;
+    align-items: center;
+}
+.aboutme_title{
+    color: cadetblue;
+    margin-bottom: 50px;
+}
+.aboutme_name{
+    margin-bottom: 20px;
+}
+.aboutme_name span{
+    font-size: 16px;
+    margin-left: 20px;
+}
+.aboutme_feature{
+    display: flex;
+}
+.aboutme_feature li{
+    margin-left: 15px;
+    color: rgb(73, 128, 190);
+}
+.aboutme_feature li::before{
+    content: "";
+    border-left: 1px solid #000;
+    padding-left: 15px;
+}
+.aboutme_picture{
+    text-align: center;
+    vertical-align: middle;
+}
+.skill{
+    background-image: linear-gradient(75deg,rgba(72, 72, 72,0.2),rgba(104, 104, 104,0.5)),url("https://picsum.photos/1600/900/?random=11");
+    background-size: cover;
+    background-position: center;
+    padding: 20em;
+    clip-path: polygon(0% 0%,100% 20%,100% 100%,0% 80%);
+}
+.skill .row{
+    text-align: center;
+    align-items: stretch;
+}
