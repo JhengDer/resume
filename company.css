@@ -8,6 +8,10 @@
     font-family: "Poppins",sans-serif;
     list-style: none;
 }
+body{
+    background-color: #000;
+    color: #fff;
+}
 img{
     object-fit: cover;
     background-position: center;
@@ -27,7 +31,7 @@ img{
     max-height: 1000px;
 }
 .txt-blue{
-    color: rgb(17, 17, 130);
+    color: rgb(38, 134, 252);
 }
 .core{
     padding-top: 40px;
@@ -50,7 +54,7 @@ img{
     height: 350px;
 }
 .coredesc_title{
-    color: rgb(17, 17, 130);
+    color: rgb(83, 119, 178);
     margin-bottom:30px;
 }
 .coredesc_desc{
@@ -74,13 +78,19 @@ img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: rgb(100, 100, 100);
     text-align: center;
     line-height: 60px;
     font-size: 30px;
     position: fixed;
     right: 5%;
     bottom: 10%;
+}
+.turntop a{
+    color: gray;
+}
+.turntop a:hover{
+    color: #ffffff;
 }
 .product{
     margin-top: 100px;

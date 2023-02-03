@@ -8,6 +8,10 @@
     font-family: "Poppins", sans-serif;
     list-style: none;
 }
+body{
+    background-color: #000;
+    color: #fff;
+}
 main {
     margin-top: 200px;
     display: flex;
@@ -231,14 +235,14 @@ main {
     top: 0px;
     left: 0;
     width: 0%;
-    height: 1px;
+    height: 2px;
 }
 
 .btn-5::after {
     bottom: 0;
     right: 0;
     width: 0;
-    height: 1px;
+    height: 2px;
 }
 
 .btn-5:hover:before {
@@ -374,7 +378,7 @@ main {
     left: 0;
     z-index: -1;
     transition: 0.5s;
-    background: radial-gradient(circle, rgb(87, 247, 255), rgb(242, 242, 242));
+    background: radial-gradient(circle, rgb(17, 205, 215), rgb(0, 0, 0));
 }
 
 .btn-8:hover::after {
@@ -406,6 +410,7 @@ main {
 }
 
 .btn-10 {
+    color: #fff;
     position: relative;
     border: none;
     background-color: transparent;
@@ -431,6 +436,7 @@ main {
 }
 
 .btn-11 {
+    color: #fff;
     border: none;
     position: relative;
     background-color: transparent;
@@ -459,6 +465,7 @@ main {
 
 /* 12 */
 .btn-12 {
+    color: #fff;
     position: relative;
     right: 20px;
     bottom: 20px;
