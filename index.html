@@ -13,131 +13,152 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="footer.css">
-
 </head>
 
 <body>
   <header>
     <a href="index.html" class="logo">JD.tech</a>
-    <ul class="drop-down-menu">
-      <li><a href="index.html" id="Home" class="active">Home</a></li>
-      <li><a href="profile.html" id="Profile">Profile</a></li>
-      <li><a href="demo.html" id="Demo">Demo</a>
-        <ul>
-          <li><a href="candyButton.html">candyButton</a></li>
-          <li><a href="login.html">login</a></li>
-          <li><a href="jquery.html">jquery</a></li>
-          <li><a href="scrollAnimation.html">scrollAnimation</a></li>
-        </ul>
-      </li>
-      <li><a href="#" id="lilicoco">lilicoco</a></li>
+    <ul>
+      <li><a href="index.html" class="active">Profile</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="candyButton.html">candyButton</a></li>
+      <li><a href="login.html">login</a></li>
+      <li><a href="scrollAnimation.html">scrollAnimation</a></li>
     </ul>
   </header>
   <main>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="carousel-caption d-none d-md-block">
-            <p class="carouselTitle">輪播圖1</p>
-          </div>
-          <img src="https://picsum.photos/1600/600/?random=10" class="d-block w-100" alt="...">
+    <section class="container-fluid profileSec">
+      <h1 class="proSecTitle1">Hello！</h1>
+      <h1 class="proSecTitle2">I'm <b>JhengDer</b></h1>
+    </section>
+    <div class="container aboutme">
+      <h1 class="Title_txt">About me</h1>
+      <div class="row">
+        <div class="col-6">
+          <h3 class="aboutme_name">謝正德<span>國立高雄科技大學</span></h3>
+          <p class="aboutme_desc">大學就讀電腦與通訊工程系，學習電子、程式、通訊…等相關知識，畢業後曾任職遊戲企劃助理兩年，現已離職待業中
+            <br><br>個性隨和，與他人溝通良好，喜好團隊合作/配合，勇於接受挑戰，追求最新知識<br><br>
+            利用空閒時間學習HTML、CSS、BootStrap、JavaScript、JQuery，以轉職網頁前端工程師為目標
+          </p>
+          <ul class="aboutme_feature">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+          </ul>
         </div>
-        <div class="carousel-item active">
-          <div class="carousel-caption d-none d-md-block">
-            <p class="carouselTitle">輪播圖2</p>
-          </div>
-          <img src="https://picsum.photos/1600/600/?random=11" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item active">
-          <div class="carousel-caption d-none d-md-block">
-            <p class="carouselTitle">輪播圖3</p>
-          </div>
-          <img src="https://picsum.photos/1600/600/?random=12" class="d-block w-100" alt="...">
+        <div class="col-6 aboutme_picture">
+          <img src="profile.jpg">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-    <div class="container-fluid core">
+    <div class="container-fluid skill">
       <div class="container">
+        <h1 class="Title_txt">Skill</h1>
         <div class="row">
-          <div class="item col-lg-6">
-            <div class="coredesc_title">
-              <h1><b>我們的使命是"以人為本"</b></h1>
-              <h5>與企業、人才建立友好牢固的信賴關係</h5>
-            </div>
-            <div class="coredesc_desc">
-              <h5 class="txt-blue">瞬息萬變的數位化環境，維持創新進行式，正是我們的首要之務</h5>
-              <p><span class="txt-blue">與時俱進：</span>持續不斷累積新知，或與新創事業合作，讓我們的夥伴、客戶、員工，都能有再造之無限淺能。
-                <span class="txt-blue">專注本業：</span>在台深耕5年，洞悉產業變化，即時應變，力求在本業中持續深化，強化自身能力與同業高度。
-                <span class="txt-blue">誠信正直：</span>客戶是碩誠的夥伴、員工是碩誠的家人，長遠的合作計畫，是我們建立深遠牢固的信賴關係。
-              </p>
-            </div>
-          </div>
-          <div class="item col-lg-6">
-            <img src="https://picsum.photos/500/500/?random=13">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid intro">
-      <div class="container">
-        <div class="row">
-          <div class="introdesc col-4">
-            <a href="#"><img src="https://picsum.photos/600/600/?random=14" class="w-100"></a>
-            <div class="introdesc_txt">
-              <h2>探索無盡可能</h4>
-                <p>藉由適用於 iPad，使用 Apple Pencil 技術的羅技 Crayon，進行繪圖、書寫和註記。</p>
-                <a href="#">Discover ></a>
+          <div class="item col-4">
+            <i class="skill_icon fa-solid fa-book-open"></i>
+            <div class="skill_txtarea">
+              <h2 class="skill_title">文書處理</h2>
+              <ul class="skill_desc">
+                <li>Word</li>
+                <li>PowerPoint</li>
+                <li>Excel</li>
+                <li>PhotoShop</li>
+              </ul>
             </div>
           </div>
-          <div class="introdesc col-4">
-            <a href="#"><img src="https://picsum.photos/600/600/?random=15" class="w-100"></a>
-            <div class="introdesc_txt">
-              <h2>擁有您自己的空間</h4>
-                <p>K580 輕薄多工無線鍵盤</p>
-                <a href="#">瞭解K580 ></a>
+          <div class="item col-4">
+            <i class="skill_icon fa-solid fa-toolbox"></i>
+            <div class="skill_txtarea">
+              <h2 class="skill_title">專業技能</h2>
+              <ul class="skill_desc">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>BootStrap</li>
+                <li>JavaScript</li>
+                <li>JQuery</li>
+                <li>Unity</li>
+                <li>Performance</li>
+                <li>Github</li>
+              </ul>
             </div>
           </div>
-          <div class="introdesc col-4">
-            <a href="#"><img src="https://picsum.photos/600/600/?random=16" class="w-100"></a>
-            <div class="introdesc_txt">
-              <h2>針對MAC設計，專為您打造</h4>
-                <p>針對 Mac 設計，與您的環境無縫整合，屢獲獎賞的配件。</p>
-                <a href="#">瞭解適用於您的MAC解決方案 ></a>
+          <div class="item col-4">
+            <i class="skill_icon fa-solid fa-globe"></i>
+            <div class="skill_txtarea">
+              <h2 class="skill_title">語言能力</h2>
+              <ul class="skill_desc">
+                <li>Chinese</li>
+                <li>Taiwanese</li>
+                <li>English</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid product">
-      <div class="product_grid container">
-        <a href="#" class="item i1">
-          <div class="item_title">鍵盤</div>
-        </a>
-        <a href="#" class="item i2">
-          <div class="item_title">滑鼠</div>
-        </a>
-        <a href="#" class="item i3">
-          <div class="item_title">鏡頭</div>
-        </a>
-        <a href="#" class="item i4">
-          <div class="item_title">耳機</div>
-        </a>
-        <a href="#" class="item i5">
-          <div class="item_title">行動裝置</div>
-        </a>
+    <div class="container Exp">
+      <h1 class="Title_txt">Experience</h1>
+      <div class="Exp_txtarea">
+        <div class="Exp_Title">Dec.2022-Now</div>
+        <div class="Exp_Desc">
+          <h2>自學網頁前端技能</h2>
+          <ul>
+            <li>藉由各教學資源自學網頁前端相關技能，如Hahow、Youtube、W3School、MDN...等</li>
+            <li>以目前的能力製作此頁自我介紹以及以下幾項網頁範例：
+              <ul>
+                <li><a href="index.html">基本公司形象首頁</a>：參考羅技官網並以常用的Bootstrap輪播圖、Grid製作基本公司首頁</li>
+                <li><a href="login.html">基本登入頁面</a>：以BootStrap使用form valid、JavaScript做出密碼限制表現</li>
+                <li><a href="candyButton.html">多種按鈕樣式</a>：以Hover結合Before/After在按鈕上做出多樣變化</li>
+                <li><a href="scrollAnimation.html">公司首頁搭配卷軸動畫</a>：以去背圖片搭配JavaScript做出隨著卷軸動作的簡易表現</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="Exp_txtarea">
+        <div class="Exp_Title">Dec.2020-Dec.2022</div>
+        <div class="Exp_Desc">
+          <h2>遊戲企劃助理</h2>
+          <ul>
+            <li><span>例行商品更新：</span>根據營運商每期給出的商品列表進行審核、判斷內容物/價格是否合理、與舊有商品是否有出入，若有問題則與營運商進行確認及調整。</li>
+            <li><span>每期活動配置：</span>根據營運商提出的預期活動排程，進行活動數據配置、審核活動獎勵和設計活動關卡難度。</li>
+            <li>
+              <span>舊有系統/玩法延伸設計&優化：</span>根據玩家當前進度、遊戲進程，設計延續關卡、玩法以及拓展成長線，拉高遊戲天花板，塑造玩家下一階段的成長目標。在操作繁瑣處設計能夠簡化玩家操作的功能，優化遊戲整體流暢度，類似快捷購買體力、掃蕩…等。
+            </li>
+            <li>
+              <span>全新系統/玩法設計：</span>根據營運商提出目標，設計全新系統/玩法，提高玩家留存、促進玩家消費，擬出初步設計後與營運商確認玩法、與程式美術確認可行性後開始製作，並在製作過程中修正設計盲點、不合理之處，並在效能、設計目的、玩家體驗中取得良好平衡。
+            </li>
+            <li><span>新內容/功能初步測試：</span>新內容/功能配置後在unity上先由企劃進行測試，測試各種情況可能發生之BUG，並與程式溝通製作預防措施，測試過後再包版至裝置上由QA進一步測試。</li>
+            <li>
+              曾參與4個專案(包含動作型、放置型手遊)、負責多項玩法/系統設計、多種優化設計、參與多種玩法設計討論，也藉由這些經驗學習到如何與程式、美術和其他部門更加清楚的表達需求、設計想法，並且更熟悉在設計想法無法實現時該如何調整去盡量達到設計目的並且降低製作成本。
+            </li>
+            <li>設計過的系統包含圖鑑、軍團戰、日常掃蕩、快速跳轉頁面、首儲、通行證、限時禮包...等等的核心系統、玩法、日常功能優化以及營運類項目功能</li>
+          </ul>
+        </div>
+      </div>
+      <div class="Exp_txtarea">
+        <div class="Exp_Title">Sep.2016-Jun.2020</div>
+        <div class="Exp_Desc">
+          <h2>國立高雄科技大學</h2>
+          <ul>
+            <li>大學就讀電腦與通訊工程系，學習電子、程式、通訊…等相關知識，以程式為主要學習重點，
+              學習過C和C++語言，在大三與同學組成專題小組製作了一款教學性質的遊戲，並在其中負責系統&關卡設計，並且在大四上與其他組員共同製作「i-Coding：運算思維自主學習平臺」投稿參加全國性賽事2019第24屆大專校院資訊應用服務創新競賽獲得「教育開放資料創新應用組第一名」與「資訊應用組IP6第二名」，已將作品附於附錄中。
+            </li>
+            <li>大學期間也曾擔任系學會幹部與活動工作人員，活動總召、活動副總召、活動幹部組長…等各種職位皆擔任過，熟悉辦理活動之程序、如何撰寫企劃書、組織人員辦理活動…等，也具有團隊精神，接受他人意見、與團隊溝通交流。
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </main>
+
+
+
+
+
   <footer>
     <div class="container">
       <div class="row">
@@ -174,7 +195,7 @@
         <div class="col-md-5 offset-md-1">
           <form action="#">
             <h5>Subscribe</h5>
-            <p>123</p>
+            <p>若想訂閱最新消息請輸入您的電子郵件</p>
             <div class="d-flex flex-column flex-sm-row w-100">
               <input type="email" id="Email" class="form-control me-2" placeholder="Example@gmail.com">
               <button type="button" id="subscribeBtn" class="btn btn-primary">Subscribe</button>
@@ -191,9 +212,6 @@
       </div>
     </div>
   </footer>
-  <div class="turntop">
-    <a href="#"><i class="fa-solid fa-angles-up"></i></a>
-  </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -202,7 +220,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/a97467505f.js" crossorigin="anonymous"></script>
 </body>
 

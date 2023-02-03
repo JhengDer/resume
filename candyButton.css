@@ -9,6 +9,7 @@
     list-style: none;
 }
 main {
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;

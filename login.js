@@ -4,7 +4,7 @@ var capital=document.getElementById("capital");
 var number=document.getElementById("number");
 var length=document.getElementById("length");
 var pattern=document.getElementById("pattern");
-
+var canLogin=Boolean;
 password.onfocus=function(){
     document.getElementById("message").style.display="block"
 }
@@ -57,7 +57,19 @@ password.onkeyup=function(){
         pattern.classList.remove("invalid");
         pattern.classList.add("valid");
     }
+    if(password.value.match(lowerCaseLetters)&&password.value.match(upperCaseLetter)&&password.value.match(letterNumber)&&password.value.length>letterLength&&!password.value.match(specialsign)){
+        canLogin=true;
+    }else{
+        canLogin=false;
+    }
 }
 $("#loginBtn").on('click',function(){
-    alert($("#Email").val);
+    $("#Email").val("");
+    $("#Password").val("");
+    alert(canLogin);
+    if(canLogin){
+        alert("login successed");
+    }else{
+        alert("login failed");
+    }
 })
