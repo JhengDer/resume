@@ -123,6 +123,9 @@ img{
     margin-left: 15px;
     color: rgb(73, 128, 190);
 }
+.aboutme_feature li:first-child{
+    margin-left: 0;
+}
 .aboutme_feature li::before{
     content: "";
     border-left: 1px solid #000;
