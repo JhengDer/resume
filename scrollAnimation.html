@@ -5,20 +5,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="scrollAnimation.css">
   <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
   <header>
-    <a href="index.html" class="logo">JD.tech</a>
-    <ul>
-      <li><a href="index.html">Profile</a></li>
-      <li><a href="company.html">Company</a></li>
-      <li><a href="candyButton.html">candyButton</a></li>
-      <li><a href="login.html">login</a></li>
-      <li><a href="scrollAnimation.html" class="active">scrollAnimation</a></li>
-    </ul>
-  </header> 
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand logo">J.D.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav me-0 ms-auto">
+            <li><a class="nav-link" href="index.html">Profile</a></li>
+            <li><a class="nav-link" href="company.html" class="active">Company</a></li>
+            <li><a class="nav-link" href="candyButton.html">candyButton</a></li>
+            <li><a class="nav-link" href="login.html">login</a></li>
+            <li><a class="nav-link" href="scrollAnimation.html">scrollAnimation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <main>
     <section>
       <h2 id="sectiontitle">It's time for a new<br><span>Adventure</span></h2>
@@ -41,6 +53,13 @@
   <footer>
 
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="scrollAnimation.js"></script>
 </body>
