@@ -48,10 +48,8 @@ img{
     padding: 0px 50px;
 }
 .core .row .item img{
-    border-radius: 50%;
     box-shadow: 160 10px rgb(169, 169, 169);
     max-width: 70%;
-    height: 350px;
 }
 .coredesc_title{
     color: rgb(83, 119, 178);
@@ -72,7 +70,7 @@ img{
     margin-top: 20px;
 }
 .intro img{
-    height: 300px;
+    min-height: 110px;
 }
 .turntop{
     width: 50px;
