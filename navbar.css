@@ -3,10 +3,10 @@ html {
     width: 100%;
     min-width: fit-content; 
 }
-.navbar{
+/* .navbar{
     padding-left: 10em;
     padding-right: 10em;
-}
+} */
 .logo{
     font-size: 1.6em;
 }
