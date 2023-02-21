@@ -36,8 +36,7 @@ const weather={
         unit:"celsius"
     },
     description:"few clouds",
-    iconId:"01d",
-    city:"London"
+    iconId:"01d"
 }
 function getweather(lat,lon){
     let api=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
@@ -49,12 +48,14 @@ function getweather(lat,lon){
         weather.temperature.value=Math.floor(data.main.temp-273.15);
         weather.description=data.weather[0].description;
         weather.city=data.name;
-        displayWeather()
+        weather.iconId=data.weather[0].icon;
+    }).then(function(){
+        displayWeather();
     })
 }
 function displayWeather(){
-    iconElement.innerHTML=`<img src="${weather.iconId}.png"></img>`;
-    tempElement.innerHTML=`${weather.temperature.value}<span>C</span>`;
+    iconElement.innerHTML=`<img src="/weather_icons/${weather.iconId}.png"></img>`;
+    tempElement.innerHTML=`${weather.temperature.value}<span>'C</span>`;
     tempdescElement.innerHTML=weather.description;
     locationElement.innerHTML=weather.city;
 }
