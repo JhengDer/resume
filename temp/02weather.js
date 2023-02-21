@@ -54,7 +54,7 @@ function getweather(lat,lon){
     })
 }
 function displayWeather(){
-    iconElement.innerHTML=`<img src="/weather_icons/${weather.iconId}.png"></img>`;
+    iconElement.innerHTML=`<img src="https://raw.githubusercontent.com/JhengDer/resume/main/temp/weather_icons/${weather.iconId}.png"></img>`;
     tempElement.innerHTML=`${weather.temperature.value}<span>'C</span>`;
     tempdescElement.innerHTML=weather.description;
     locationElement.innerHTML=weather.city;
