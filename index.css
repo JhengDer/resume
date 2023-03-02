@@ -225,3 +225,10 @@ img{
 .turntop a:hover{
     color: #ffffff;
 }
+
+@media(max-width:500px){
+    .aboutme_feature li{
+        margin-left: 0px;
+        font-size: 1rem;
+    }
+}
