@@ -47,5 +47,13 @@ section::before{
 }
 .content{
     background-color: rgb(29, 118, 221);
-    padding: 20px 200px;
+    padding: 20px;
+}
+@media (max-width:768px) {
+    section h2{
+        font-size: 40px;
+    }
+    section span{
+        font-size: 70px;
+    }
 }

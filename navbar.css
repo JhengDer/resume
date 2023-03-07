@@ -13,3 +13,6 @@ html {
 .navbar-nav li{
     padding-left: 2em;
 }
+header{
+    text-transform: capitalize;
+}
