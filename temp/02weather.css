@@ -2,113 +2,154 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     list-style: none;
 }
-html{
+
+html {
     width: 100%;
     box-sizing: border-box;
     transition: all .2s linear;
     background-color: rgb(227, 255, 255);
 }
-main{
+
+main {
     font-size: 80%;
     background-color: rgb(227, 255, 255);
 }
-.wrap{
+
+.wrap {
     margin-top: 10rem;
     display: flex;
     justify-content: center;
 }
-.weather-container{
+
+.weather-container {
     display: flex;
     align-items: center;
     font-size: 4.5rem;
 }
-.weather-container img{
+
+.weather-container img {
     width: 10rem;
     height: auto/100%;
 }
-.weather-container .temperature-value{
-    margin-left: 2rem;
-}
-.weather-container .temperature-description{
+
+.weather-container .temperature-value {
     margin-left: 2rem;
 }
 
-.weather-container .location{
+.weather-container .temperature-description {
     margin-left: 2rem;
 }
-.container .btn-group{
+
+.weather-container .location {
+    margin-left: 2rem;
+}
+
+.container .btn-group {
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
 }
-.container .btn-group button{
+
+.container .btn-group button {
     width: 100%;
     padding: 0 1rem;
     border: none;
     color: black;
     background-color: rgb(211, 255, 251);
 }
-.container .btn-group button.btn-active{
+
+.container .btn-group button.btn-active {
     background-color: rgb(140, 186, 255);
 }
 
-.news{
+.news {
     border: 1px gray solid;
     padding: 1rem;
     border: none;
 }
-.news p{
+
+.news p {
     margin: 0;
     position: relative;
     padding-left: 1rem;
     font-size: 1rem;
 }
-.news p span{
+
+.news p span {
     position: absolute;
     right: 0;
 }
-.news p::before{
+
+.news p::before {
     content: ">";
     position: absolute;
     left: 0;
 }
-@media(max-width:1400px){
-    .news p{
+
+@media(max-width:1400px) {
+    .news p {
         font-size: 0.8rem;
     }
 }
-@media(max-width:1202px){
-    .wrap{
-    margin-top: 7rem;
+
+@media(max-width:1202px) {
+    .wrap {
+        margin-top: 7rem;
     }
-    .weather-container{
+
+    .weather-container {
         font-size: 3rem;
     }
 }
-@media(max-width:991px){
-    .wrap{
-    margin-top: 5rem;
+
+@media(max-width:991px) {
+    .wrap {
+        margin-top: 5rem;
     }
-    .weather-container{
+
+    .weather-container {
         font-size: 2.4rem;
     }
 }
-@media(max-width:768px){
-    .wrap{
-    margin-top: 5rem;
+
+@media(max-width:768px) {
+    .wrap {
+        margin-top: 5rem;
     }
-    .weather-container{
+
+    .weather-container {
         font-size: 1.5rem;
     }
-    .weather-container img{
+
+    .weather-container img {
         width: 7rem;
         height: auto/100%;
     }
 }
 
+@media(max-width:510px) {
+    .wrap {
+        margin-top: 5rem;
+    }
+
+    .weather-container {
+        font-size: 1rem;
+    }
+
+    .weather-container img {
+        width: 5rem;
+        height: auto/100%;
+    }
+
+    .container .btn-group {
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
