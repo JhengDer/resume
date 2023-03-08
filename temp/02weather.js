@@ -76,13 +76,14 @@ function showError(error) {
     notificationElemnt.innerHTML = `<p>${error.message}</p>`;
 }
 
-const apikey = '24fec3aef13043698f2043b05cdd2860';
+const apikey = 'pub_185236d33cdd9d991a3fdfe86d31715a7d6ce';
 
-fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&apiKey=${apikey}`).then(function (res) {
+
+fetch(`https://newsdata.io/api/1/news?country=tw&apikey=${apikey}`).then(function (res) {
     return res.json();
 }).then(function (items) {
     console.log(items);
-    items.articles.forEach(e => {
+    items.results.forEach(e => {
         newsUpdate(e);
     });
 }).catch(function (err) {
@@ -92,10 +93,10 @@ fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&apiKey=${apik
 $('#general').click(function () {
     console.log("normalcc");
     $('.news').empty();
-    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+    fetch(`https://newsdata.io/api/1/news?country=tw&apikey=${apikey}`).then(function (res) {
         return res.json();
     }).then(function (items) {
-        items.articles.forEach(e => {
+        items.results.forEach(e => {
             newsUpdate(e);
         });
     }).catch(function (err) {
@@ -104,10 +105,10 @@ $('#general').click(function () {
 });
 $('#business').click(function () {
     $('.news').empty();
-    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+    fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
         return res.json();
     }).then(function (items) {
-        items.articles.forEach(e => {
+        items.results.forEach(e => {
             newsUpdate(e);
         });
     }).catch(function (err) {
@@ -116,10 +117,10 @@ $('#business').click(function () {
 });
 $('#entertainment').click(function () {
     $('.news').empty();
-    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+    fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
         return res.json();
     }).then(function (items) {
-        items.articles.forEach(e => {
+        items.results.forEach(e => {
             newsUpdate(e);
         });
     }).catch(function (err) {
@@ -128,22 +129,22 @@ $('#entertainment').click(function () {
 });
 $('#health').click(function () {
     $('.news').empty();
-    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+    fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
         return res.json();
     }).then(function (items) {
-        items.articles.forEach(e => {
+        items.results.forEach(e => {
             newsUpdate(e);
         });
     }).catch(function (err) {
         console.log(err);
     })
 });
-$('#science').click(function () {
+$('#politics').click(function () {
     $('.news').empty();
-    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+    fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
         return res.json();
     }).then(function (items) {
-        items.articles.forEach(e => {
+        items.results.forEach(e => {
             newsUpdate(e);
         });
     }).catch(function (err) {
@@ -152,10 +153,10 @@ $('#science').click(function () {
 });
 $('#sports').click(function () {
     $('.news').empty();
-    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+    fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
         return res.json();
     }).then(function (items) {
-        items.articles.forEach(e => {
+        items.results.forEach(e => {
             newsUpdate(e);
         });
     }).catch(function (err) {
@@ -166,23 +167,23 @@ function newsUpdate(e) {
     length = e.title.length;
     if(window.innerWidth<768){
         if (length > 20) {
-            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 20) + "......"}</a></p>`);
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 20) + "......"}</a></p>`);
         } else {
-            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
         }
     }else if(window.innerWidth < 991) {
         if (length > 30) {
-            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 30) + "......"}</a></p>`);
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 30) + "......"}</a></p>`);
         } else {
-            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
         }
     } else if (window.innerWidth < 1200) {
         if (length > 50) {
-            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 50) + "......"}</a></p>`);
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 50) + "......"}</a></p>`);
         } else {
-            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
         }
     }else{
-        $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
+        $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
     }
 }
