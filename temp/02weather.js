@@ -21,58 +21,165 @@
 //     })
 // }
 
-const key="ef9059f5a1bf2bbe3dc3d337b3f15ece";
+const key = "ef9059f5a1bf2bbe3dc3d337b3f15ece";
 
-const notificationElemnt=document.querySelector(".notification");
-const iconElement=document.querySelector(".weather-icon");
-const tempElement=document.querySelector(".temperature-value p");
-const tempdescElement=document.querySelector(".temperature-description p");
-const locationElement=document.querySelector(".location");
+const notificationElemnt = document.querySelector(".notification");
+const iconElement = document.querySelector(".weather-icon");
+const tempElement = document.querySelector(".temperature-value p");
+const tempdescElement = document.querySelector(".temperature-description p");
+const locationElement = document.querySelector(".location");
 
 
-const weather={
-    temperature:{
-        value:18,
-        unit:"celsius"
+const weather = {
+    temperature: {
+        value: 18,
+        unit: "celsius"
     },
-    description:"few clouds",
-    iconId:"01d"
+    description: "few clouds",
+    iconId: "01d"
 }
-function getweather(lat,lon){
-    let api=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
+function getweather(lat, lon) {
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
     console.log(api);
-    fetch(api).then(function(response){
+    fetch(api).then(function (response) {
         return response.json()
-    }).then(function(data){
+    }).then(function (data) {
         console.log(data);
-        weather.temperature.value=Math.floor(data.main.temp-273.15);
-        weather.description=data.weather[0].description;
-        weather.city=data.name;
-        weather.iconId=data.weather[0].icon;
-    }).then(function(){
+        weather.temperature.value = Math.floor(data.main.temp - 273.15);
+        weather.description = data.weather[0].description;
+        weather.city = data.name;
+        weather.iconId = data.weather[0].icon;
+    }).then(function () {
         displayWeather();
     })
 }
-function displayWeather(){
-    iconElement.innerHTML=`<img src="https://raw.githubusercontent.com/JhengDer/resume/main/temp/weather_icons/${weather.iconId}.png"></img>`;
-    tempElement.innerHTML=`${weather.temperature.value}<span>'C</span>`;
-    tempdescElement.innerHTML=weather.description;
-    locationElement.innerHTML=weather.city;
+function displayWeather() {
+    iconElement.innerHTML = `<img src="https://raw.githubusercontent.com/JhengDer/resume/main/temp/weather_icons/${weather.iconId}.png"></img>`;
+    tempElement.innerHTML = `${weather.temperature.value}<span>'C</span>`;
+    tempdescElement.innerHTML = weather.description;
+    locationElement.innerHTML = weather.city;
 }
-if("geolocation"in navigator){
-    navigator.geolocation.getCurrentPosition(setPosition,showError);
-}else{
-    notificationElemnt.style.display="block";
-    notificationElemnt.innerHTML="<p>Browser doesn't support Geolocation</p>"
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+} else {
+    notificationElemnt.style.display = "block";
+    notificationElemnt.innerHTML = "<p>Browser doesn't support Geolocation</p>"
 }
 
-function setPosition(position){
+function setPosition(position) {
     let latitude = position.coords.latitude;
-    let longitude=position.coords.longitude;
-    getweather(latitude,longitude);
+    let longitude = position.coords.longitude;
+    getweather(latitude, longitude);
 }
-function showError(error){
-    notificationElemnt.style.display="block";
-    notificationElemnt.innerHTML=`<p>${error.message}</p>`;
+function showError(error) {
+    notificationElemnt.style.display = "block";
+    notificationElemnt.innerHTML = `<p>${error.message}</p>`;
 }
 
+const apikey = '24fec3aef13043698f2043b05cdd2860';
+
+fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&apiKey=${apikey}`).then(function (res) {
+    return res.json();
+}).then(function (items) {
+    console.log(items);
+    items.articles.forEach(e => {
+        newsUpdate(e);
+    });
+}).catch(function (err) {
+    console.log(err);
+})
+
+$('#general').click(function () {
+    $('.news').empty();
+    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+        return res.json();
+    }).then(function (items) {
+        items.articles.forEach(e => {
+            newsUpdate(e);
+        });
+    }).catch(function (err) {
+        console.log(err);
+    })
+});
+$('#business').click(function () {
+    $('.news').empty();
+    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+        return res.json();
+    }).then(function (items) {
+        items.articles.forEach(e => {
+            newsUpdate(e);
+        });
+    }).catch(function (err) {
+        console.log(err);
+    })
+});
+$('#entertainment').click(function () {
+    $('.news').empty();
+    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+        return res.json();
+    }).then(function (items) {
+        items.articles.forEach(e => {
+            newsUpdate(e);
+        });
+    }).catch(function (err) {
+        console.log(err);
+    })
+});
+$('#health').click(function () {
+    $('.news').empty();
+    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+        return res.json();
+    }).then(function (items) {
+        items.articles.forEach(e => {
+            newsUpdate(e);
+        });
+    }).catch(function (err) {
+        console.log(err);
+    })
+});
+$('#science').click(function () {
+    $('.news').empty();
+    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+        return res.json();
+    }).then(function (items) {
+        items.articles.forEach(e => {
+            newsUpdate(e);
+        });
+    }).catch(function (err) {
+        console.log(err);
+    })
+});
+$('#sports').click(function () {
+    $('.news').empty();
+    fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
+        return res.json();
+    }).then(function (items) {
+        items.articles.forEach(e => {
+            newsUpdate(e);
+        });
+    }).catch(function (err) {
+        console.log(err);
+    })
+});
+function newsUpdate(e) {
+    length = e.title.length;
+    if(window.innerWidth<768){
+        if (length > 20) {
+            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 20) + "......"}</a></p>`);
+        } else {
+            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
+        }
+    }else if(window.innerWidth < 991) {
+        if (length > 30) {
+            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 30) + "......"}</a></p>`);
+        } else {
+            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
+        }
+    } else if (window.innerWidth < 1200) {
+        if (length > 50) {
+            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 50) + "......"}</a></p>`);
+        } else {
+            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 50)}</a></p>`);
+        }
+    }
+}

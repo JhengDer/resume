@@ -8,42 +8,89 @@
     font-family: "Poppins",sans-serif;
     list-style: none;
 }
-body{
-    background-color: rgb(179, 225, 247);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+html{
+    width: 100%;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+main{
+    font-size: 80%;
 }
 .wrap{
-    overflow: hidden;
-    width: 500px;
-    height: 600px;
-    border-radius: 10%;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-}
-.wrap .title{
-    height: 100px;
-    line-height: 100px;
-    font-size: 40px;
-}
-.notification{
-    height: 50px;
-    display: none;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
 }
 .weather-container{
-    padding: 20px;
-    font-size: 28px;
-    background-color: rgb(195, 232, 232);
+    display: flex;
+    align-items: center;
+    font-size: 4.5rem;
 }
 .weather-container img{
-    width: 30%;
-    display: block;
-    margin: auto;
-    object-fit: cover;
-    object-position: center center;
+    width: 10rem;
+    height: auto/100%;
 }
 .weather-container .temperature-value{
-    font-size: 70px;
+    margin-left: 2rem;
 }
+.weather-container .temperature-description{
+    margin-left: 2rem;
+}
+
+.weather-container .location{
+    margin-left: 2rem;
+}
+
+.news{
+    border: 1px gray solid;
+    padding: 1rem;
+}
+.news p{
+    margin: 0;
+    position: relative;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+.news p span{
+    position: absolute;
+    right: 0;
+}
+.news p::before{
+    content: ">";
+    position: absolute;
+    left: 0;
+}
+@media(max-width:1400px){
+    .news p{
+        font-size: 0.8rem;
+    }
+}
+@media(max-width:1202px){
+    .wrap{
+    margin-top: 7rem;
+    }
+    .weather-container{
+        font-size: 3rem;
+    }
+}
+@media(max-width:991px){
+    .wrap{
+    margin-top: 3rem;
+    }
+    .weather-container{
+        font-size: 2.4rem;
+    }
+}
+@media(max-width:991px){
+    .wrap{
+    margin-top: 2.3rem;
+    }
+    .weather-container{
+        font-size: 1.3rem;
+    }
+    .weather-container img{
+        width: 7rem;
+        height: auto/100%;
+    }
+}
+
