@@ -12,9 +12,11 @@ html{
     width: 100%;
     box-sizing: border-box;
     transition: all .2s linear;
+    background-color: rgb(227, 255, 255);
 }
 main{
     font-size: 80%;
+    background-color: rgb(227, 255, 255);
 }
 .wrap{
     margin-top: 10rem;
@@ -40,10 +42,26 @@ main{
 .weather-container .location{
     margin-left: 2rem;
 }
+.container .btn-group{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.container .btn-group button{
+    width: 100%;
+    padding: 0 1rem;
+    border: none;
+    color: black;
+    background-color: rgb(211, 255, 251);
+}
+.container .btn-group button.btn-active{
+    background-color: rgb(140, 186, 255);
+}
 
 .news{
     border: 1px gray solid;
     padding: 1rem;
+    border: none;
 }
 .news p{
     margin: 0;
@@ -75,18 +93,18 @@ main{
 }
 @media(max-width:991px){
     .wrap{
-    margin-top: 3rem;
+    margin-top: 5rem;
     }
     .weather-container{
         font-size: 2.4rem;
     }
 }
-@media(max-width:991px){
+@media(max-width:768px){
     .wrap{
-    margin-top: 2.3rem;
+    margin-top: 5rem;
     }
     .weather-container{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .weather-container img{
         width: 7rem;

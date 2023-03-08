@@ -10,51 +10,59 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="02weather.css">
-     <link rel="stylesheet" href="../navbar.css">
+
+  <link rel="stylesheet" href="02weather.css">
+  <link rel="stylesheet" href="../navbar.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid px-5">
-            <a href="../index.html" class="navbar-brand logo">J.D.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav nav me-0 ms-auto">
-                <li><a class="nav-link" href="../index.html">Profile</a></li>
-                <li><a class="nav-link" href="../company.html">Company</a></li>
-                <li><a class="nav-link" href="../shop/shop.html">Shop</a></li>
-                <li><a class="nav-link" href="../login.html">login</a></li>
-                <li><a class="nav-link" href="02weather.html">weather</a></li>
-                <li><a class="nav-link" href="../candyButton.html">candyButton</a></li>
-                <li><a class="nav-link" href="../scrollAnimation.html">scrollAnimation</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid px-5">
+        <a href="../index.html" class="navbar-brand logo">J.D.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav me-0 ms-auto">
+            <li><a class="nav-link" href="../index.html">Profile</a></li>
+            <li><a class="nav-link" href="../company.html">Company</a></li>
+            <li><a class="nav-link" href="../shop/shop.html">Shop</a></li>
+            <li><a class="nav-link" href="../login.html">login</a></li>
+            <li><a class="nav-link" href="02weather.html">weather</a></li>
+            <li><a class="nav-link" href="../candyButton.html">candyButton</a></li>
+            <li><a class="nav-link" href="../scrollAnimation.html">scrollAnimation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <main>
     <div class="container">
       <div class="wrap">
-          <div class="notification"></div>
-          <div class="weather-container">
-              <div class="weather-icon"><img src="" alt=""></div>
-              <div class="temperature-value"><p>- <span>/'C</span></p></div>
-              <div class="temperature-description"><p>-</p></div>
-              <div class="location"><p>-</p></div>
+        <div class="notification"></div>
+        <div class="weather-container">
+          <div class="weather-icon"><img src="" alt=""></div>
+          <div class="temperature-value">
+            <p>- <span>/'C</span></p>
           </div>
+          <div class="temperature-description">
+            <p>-</p>
+          </div>
+          <div class="location">
+            <p>-</p>
+          </div>
+        </div>
       </div>
-      <button id="general" type="button">綜合</button>
-      <button id="business" type="button">商業</button>
-      <button id="entertainment" type="button">娛樂</button>
-      <button id="health" type="button">健康</button>
-      <button id="politics" type="button">政治</button>
-      <button id="sports" type="button">運動</button>
+      <div class="btn-group">
+        <button class="btn-active" id="general" type="button">綜合</button>
+        <button id="business" type="button">商業</button>
+        <button id="entertainment" type="button">娛樂</button>
+        <button id="health" type="button">健康</button>
+        <button id="politics" type="button">政治</button>
+        <button id="sports" type="button">運動</button>
+      </div>
       <div class="news"></div>
     </div>
   </main>
@@ -64,12 +72,12 @@
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
-  
+    </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
   <script src="02weather.js"></script>
 </body>

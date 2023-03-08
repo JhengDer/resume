@@ -165,13 +165,20 @@ $('#sports').click(function () {
 });
 function newsUpdate(e) {
     length = e.title.length;
-    if(window.innerWidth<768){
+    if (window.innerWidth < 540) {
+        if (length > 13) {
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 13) + "......"}</a></p>`);
+        } else {
+            $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
+        }
+    }
+    else if (window.innerWidth < 768) {
         if (length > 20) {
             $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 20) + "......"}</a></p>`);
         } else {
             $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
         }
-    }else if(window.innerWidth < 991) {
+    } else if (window.innerWidth < 991) {
         if (length > 30) {
             $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 30) + "......"}</a></p>`);
         } else {
@@ -183,7 +190,11 @@ function newsUpdate(e) {
         } else {
             $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
         }
-    }else{
+    } else {
         $('.news').append(`<p><span>${e.pubDate.slice(0, 10)} ${e.pubDate.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
     }
 }
+$('button').click(function (){
+    $('.btn-active').toggleClass('btn-active');
+    $(this).toggleClass('btn-active');
+})
