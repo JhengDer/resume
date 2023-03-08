@@ -90,6 +90,7 @@ fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&apiKey=${apik
 })
 
 $('#general').click(function () {
+    console.log("normalcc");
     $('.news').empty();
     fetch(`https://newsapi.org/v2/top-headlines?country=tw&pagesize=30&category=${this.id}&apiKey=${apikey}`).then(function (res) {
         return res.json();
@@ -179,7 +180,9 @@ function newsUpdate(e) {
         if (length > 50) {
             $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 50) + "......"}</a></p>`);
         } else {
-            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title.slice(0, 50)}</a></p>`);
+            $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
         }
+    }else{
+        $('.news').append(`<p><span>${e.publishedAt.slice(0, 10)} ${e.publishedAt.slice(11, 19)}</span><a href="${e.url}">${e.title}</a></p>`);
     }
 }
