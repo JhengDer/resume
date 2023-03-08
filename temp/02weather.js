@@ -80,6 +80,7 @@ const apikey = 'pub_185236d33cdd9d991a3fdfe86d31715a7d6ce';
 
 
 fetch(`https://newsdata.io/api/1/news?country=tw&apikey=${apikey}`).then(function (res) {
+    $('.news').empty();
     return res.json();
 }).then(function (items) {
     console.log(items);
@@ -93,7 +94,9 @@ fetch(`https://newsdata.io/api/1/news?country=tw&apikey=${apikey}`).then(functio
 $('#general').click(function () {
     console.log("normalcc");
     $('.news').empty();
+    loading();
     fetch(`https://newsdata.io/api/1/news?country=tw&apikey=${apikey}`).then(function (res) {
+        $('.news').empty();
         return res.json();
     }).then(function (items) {
         items.results.forEach(e => {
@@ -105,7 +108,9 @@ $('#general').click(function () {
 });
 $('#business').click(function () {
     $('.news').empty();
+    loading();
     fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
+        $('.news').empty();
         return res.json();
     }).then(function (items) {
         items.results.forEach(e => {
@@ -117,7 +122,9 @@ $('#business').click(function () {
 });
 $('#entertainment').click(function () {
     $('.news').empty();
+    loading();
     fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
+        $('.news').empty();
         return res.json();
     }).then(function (items) {
         items.results.forEach(e => {
@@ -129,7 +136,9 @@ $('#entertainment').click(function () {
 });
 $('#health').click(function () {
     $('.news').empty();
+    loading();
     fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
+        $('.news').empty();
         return res.json();
     }).then(function (items) {
         items.results.forEach(e => {
@@ -141,7 +150,9 @@ $('#health').click(function () {
 });
 $('#politics').click(function () {
     $('.news').empty();
+    loading();
     fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
+        $('.news').empty();
         return res.json();
     }).then(function (items) {
         items.results.forEach(e => {
@@ -153,7 +164,9 @@ $('#politics').click(function () {
 });
 $('#sports').click(function () {
     $('.news').empty();
+    loading();
     fetch(`https://newsdata.io/api/1/news?country=tw&category=${this.id}&apikey=${apikey}`).then(function (res) {
+        $('.news').empty();
         return res.json();
     }).then(function (items) {
         items.results.forEach(e => {
@@ -198,3 +211,7 @@ $('button').click(function (){
     $('.btn-active').toggleClass('btn-active');
     $(this).toggleClass('btn-active');
 })
+
+function loading(){
+    $('.news').append(`<div class="circle"></div><div class="circle"></div><div class="circle"></div>`)
+}
