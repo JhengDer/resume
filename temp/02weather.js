@@ -58,6 +58,18 @@ function displayWeather() {
     tempElement.innerHTML = `${weather.temperature.value}<span>'C</span>`;
     tempdescElement.innerHTML = weather.description;
     locationElement.innerHTML = weather.city;
+    console.log(weather.iconId);
+    if(weather.iconId.slice(0,2)=="01"){
+        $('body').css("backgroundImage", "url(sunny.jpg)");
+    }else if(weather.iconId.slice(0,2)=="02"||weather.iconId.slice(0,2)=="03"||weather.iconId.slice(0,2)=="04"){
+        $('body').css("backgroundImage", "url(clouds.jpg)");
+    }else if(weather.iconId.slice(0,2)=="09"||weather.iconId.slice(0,2)=="10"){
+        $('body').css("backgroundImage", "url(rain.jpg)");
+    }else if(weather.iconId.slice(0,2)=="11"){
+        $('body').css("backgroundImage", "url(thunder.jpg)");
+    }else{
+        $('body').css("backgroundImage", "url(mist.jpg)");
+    }
 }
 if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
