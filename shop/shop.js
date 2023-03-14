@@ -1,4 +1,6 @@
-
+$(function(){
+  alert("您好，此頁為純手刻版面，不使用Bootstrap的方式製作生鮮食材平台，圖片大多以假圖暫代，可在Our Products及Customer's Review左右滑動。\n\n點擊標題Home或是左上角JD logo回到原履歷網頁")
+})
 $('#search-btn').click(function () { 
     $('.search-form').toggleClass('active');
     $('.navbar').removeClass('active');
