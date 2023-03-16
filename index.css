@@ -134,8 +134,10 @@ img{
 .aboutme_picture{
     text-align: center;
     vertical-align: middle;
+    padding-bottom: 2rem;
 }
 .aboutme_picture img{
+    border-radius: 3px;
     width: 50%;
 }
 .skill{
@@ -226,9 +228,30 @@ img{
     color: #ffffff;
 }
 
+.hidden{
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: 1s all ease;
+}
+.show{
+    filter: blur(0px);
+    transform: translateX(0);
+    transition: 1s all linear;
+}
+
 @media(max-width:500px){
     .aboutme_feature li{
         margin-left: 0px;
         font-size: 1rem;
+    }
+    .hidden{
+        filter: blur(5px);
+        transform: translateX(-50%);
+        transition: 1s all ease;
+    }
+    .show{
+        filter: blur(0px);
+        transform: translateX(0);
+        transition: 1s all linear;
     }
 }
