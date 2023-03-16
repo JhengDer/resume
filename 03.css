@@ -1,0 +1,16 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    object-fit: cover;
+    width: 10%;
+    animation: bit 1s infinite alternate;
+}
+@keyframes bit{
+    to{
+        width: 30%;
+    }
+}
