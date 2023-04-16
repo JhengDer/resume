@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+img{
+    cursor: pointer;
+    vertical-align: middle;
+}
+.navbar{
+    display: flex;
+    /* background-color: aqua; */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    padding: .7rem 0.5rem;
+    top: 0;
+}
+
+/* nav-left */
+.nav-left{
+    width: 17rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.nav-left img{
+    object-fit: cover;
+    width:3rem;
+}
+.nav-left .sidemenu-btn{
+    color: #da1313;
+    margin-left: 1rem;
+}
+.nav-left a{
+    color: #fff;
+    margin-left: 1rem;
+}
+
+/* nav-middle */
+.nav-middle{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 40rem;
+    align-items: center;
+}
+.nav-middle input{
+    padding: .2rem 1rem;
+    width: 80%;
+    font-size: 1rem;
+    border-radius: 10rem 0% 0% 10rem;
+    border: none;
+    height: 2.4rem;
+}
+.nav-middle button{
+    font-size: 1.4rem;
+    border: none;
+    width: 5rem;
+    height: 2.4rem;
+    border-radius: 0 10rem 10rem 0;
+}
+
+.nav-middle button:last-child{
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgb(45, 45, 45);
+    width: 2.4rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+    padding-left: .1rem;
+}
+
+/* nav-right */
+.nav-right{
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: nowrap;
+    width: 18rem;
+    justify-content: end;
+    align-items: center;
+}
+.nav-right a{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    /* background-color: red; */
+    text-align: center;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+@media(max-width:1440px){
+    html{
+        font-size: .8rem;
+    }
+}
+
+/* navbar end */
+
+/* sidebar */
+.sideBar{
+    top: 0;
+    padding-top: .7rem;
+    background-color: #5a5a5a;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transition: .5s;
+    transform: translateX(-100%);
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+.shortLinks:hover::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+.shortLinks:hover::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+/* .sideBar::-webkit-scrollbar{
+    width: 20px;
+}  */
+/* 
+.sideBar::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+
+.sideBar::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+} */
+.sideBar .shortLinks{
+    font-size: .9rem;
+    padding: 0 1.5rem;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.sideBar .shortLinks a p{
+    padding: 1rem 1rem;
+}
+.sideBar .shortLinks a i,.sideBar .shortLinks .showmore i{
+    margin-right:1rem;
+    font-size: 1.1rem;
+    width: 1.5rem;
+}
+.sideBar .shortLinks hr{
+    opacity: 0.5;
+    margin: 1rem 0;
+}
+.sideBar .shortLinks .showmore{
+    color: #fff;
+    padding: 1rem 1rem;
+    cursor: pointer;
+}
+.sideBarActive{
+    transform: translateX(0%);
+}
+/* sideBarend */
+
+/* content start*/
+.content{
+    /* background-color: #da1313; */
+    margin: 5rem 10rem 0rem 10rem;
+    display: flex;
+    color: #fff;
+}
+.content .video{
+    max-width: 1280px;
+}
+.content .video iframe{
+    width: 1280px;
+    height: 720px;
+}
+.content .video .videoProfile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .video .videoProfile .creatorProfile{
+    display: flex;
+}
+
+/* videoList */
+
+.content .videoList .listControll{
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.content .videoList .listControll button{
+    padding: .2rem .5rem;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.content .videoList .listControll button:hover{
+    background-color: #5a5a5a;
+}
+.content .videoList .videoItem{
+    display: flex;
+}
+.content .videoList .videoItem .videoThumb{
+    position: relative;
+}
+.content .videoList .videoItem .videoThumb p{
+    position: absolute;
+    right: .4rem;bottom: .3rem;
+    background-color: rgba(0, 0, 0,.7);
+    padding: 0 .3rem;
+    border-radius: 5px;
+}
+.content .videoList .videoItem .videoThumb .icon{
+    display: none;
+    background-color: black;
+    text-align: center;
+    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: .4rem;
+    top: .2rem;
+}
+.content .videoList .videoItem .videoThumb .icon:last-child{
+    top: 2.4rem;
+}
+.content .videoList .videoItem .videoThumb:hover .icon{
+    display: block;
+}
